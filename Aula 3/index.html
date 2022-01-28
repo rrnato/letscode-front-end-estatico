@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aula 3 - CSS Seletores</title>
+  <style>
+      /*Seletor Universal - Por afetar todos elementos é uma boa prática colocar no inicio*/
+      * {
+          margin: 0;
+      }
+     /*Seletor por classe*/
+      .Titulo, .subtitulo{
+          color: red;
+      }
+      h2.yellow { 
+          background-color: yellow;
+          width: 50vw;
+          height: 10vw;
+      }
+      /*Seletor por Tag*/
+      h1 {
+          color: blue;
+          font-size: 50px;
+      }
+      h2 {
+          color: green;
+      }
+      #negrito {
+          font-weight: bold;          
+      }
+      /*Seleciona todos os elementos <a>  que possuam o atributo title*/
+      a[title]{
+        color: red;
+      }
+      /*Seleciona todos os elementos <a>  que possuam o atributo title = "titulo-1"*/
+      a[title="titulo-1"]{
+          color:black;
+      }
+      p[class~="texto"]{
+          font-size: 32px;
+      }
+  </style>
+</head>
+<body>
+    <h1 class="Titulo">Esté é um título </h1>
+    <h2 class="subtitulo yellow">Este é um subtitulo</h2>
+    <h3 class="subtitulo yellow"> Este é um h3</h3>
+    <p id="negrito">Este é um parágrafo</p>
+    <p>Este é outro parágrafo</p>
+
+    <br>
+    <br>
+    <br>
+
+    <a href="https://google.com" title="titulo-1"> Este é um link</a>
+    <a href="https://google.com" title="titulo-2"> Este é um link</a>
+    <a href="https://google.com" title="titulo-3"> Este é um link</a>
+
+    <p class="texto"> Um texto qualquer</p>
+
+    <p class="texto-qualquer"> Aqui é outro texto qualquer</p>
+</body>
+</html> 
